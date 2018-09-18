@@ -1,1 +1,13 @@
+import random
+number_list = []
+number_list.append(random.random())
+number_list.append(random.random())
+number_list.append(random.random())
+number_list.append(random.random())
+number_list.append(random.random())
+number_list.append(random.random())
+number_list.append(random.random())
+number_list.append(random.random())
+number_list.sort(reverse = True)
+print(number_list)
 
