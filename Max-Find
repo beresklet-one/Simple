@@ -1,7 +1,5 @@
-li = [5,2,7,4,0,9,8,6] 
-n = 1                  
-for i in range(len(li)-n):
+li = [5,2,7,4,0,9,8,6]                  
+for i in range(len(li)-1):
      if li[i] < li[i+1]:
           m = li[i+1]
-     n += 1
 print(m)
