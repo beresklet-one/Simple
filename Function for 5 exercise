@@ -1,0 +1,140 @@
+def freqn(text):
+   text.lower()
+   a1 = 0
+   b1 = 0
+   c1 = 0
+   d1 = 0
+   e1 = 0
+   f1 = 0
+   g1 = 0
+   h1 = 0
+   i1 = 0
+   j1 = 0
+   k1 = 0
+   l1 = 0
+   m1 = 0
+   n1 = 0
+   o1 = 0
+   p1 = 0
+   q1 = 0
+   r1 = 0
+   s1 = 0
+   t1 = 0
+   u1 = 0
+   v1 = 0
+   w1 = 0
+   x1 = 0
+   y1 = 0
+   z1 = 0
+   space1 = 0
+   for i in range(len(text)):
+        if text[i] == 'a':
+             a1 += 1
+        elif text[i] == 'b':
+             b1 += 1
+        elif text[i] == 'c':
+             c1 += 1
+        elif text[i] == 'd':
+             d1 += 1
+        elif text[i] == 'e':
+             e1 += 1
+        elif text[i] == 'f':
+             f1 += 1
+        elif text[i] == 'g':
+             g1 += 1
+        elif text[i] == 'h':
+             h1 += 1
+        elif text[i] == 'i':
+             i1 += 1
+        elif text[i] == 'j':
+             j1 += 1
+        elif text[i] == 'k':
+             k1 += 1
+        elif text[i] == 'l':
+             l1 += 1
+        elif text[i] == 'm':
+             m1 += 1
+        elif text[i] == 'n':
+             n1 += 1
+        elif text[i] == 'o':
+             o1 += 1
+        elif text[i] == 'p':
+             p1 += 1
+        elif text[i] == 'q':
+             q1 += 1
+        elif text[i] == 'r':
+             r1 += 1
+        elif text[i] == 's':
+             s1 += 1
+        elif text[i] == 't':
+             t1 += 1
+        elif text[i] == 'u':
+             u1 += 1
+        elif text[i] == 'w':
+             w1 += 1
+        elif text[i] == 'x':
+             x1 += 1
+        elif text[i] == 'y':
+             y1 += 1
+        elif text[i] == 'z':
+             z1 += 1
+        elif text[i] == ' ':
+             space1 += 1
+        elif text[i] == 'v':
+             v1 += 1
+   print('Total number of symbol a : ', a1  ,'\n')
+   print('Number of symbol a in persent : ',(a1/(len(text))*100),'% \n')
+   print('Total number of symbol b : ', b1 ,'\n')
+   print('Number of symbol b in persent : ',(b1/(len(text))*100),'% \n')
+   print('Total number of symbol c : ', c1 ,'\n')
+   print('Number of symbol c in persent : ',(c1/(len(text))*100),'% \n')
+   print('Total number of symbol d : ', d1 ,'\n')
+   print('Number of symbol d in persent : ',(d1/(len(text))*100),'% \n')
+   print('Total number of symbol e : ', e1 ,'\n')
+   print('Number of symbol e in persent : ',(e1/(len(text))*100),'% \n')
+   print('Total number of symbol f : ', f1 ,'\n')
+   print('Number of symbol f in persent : ',(f1/(len(text))*100),'% \n')
+   print('Total number of symbol g : ', g1 ,'\n')
+   print('Number of symbol g in persent : ',(g1/(len(text))*100),'% \n')
+   print('Total number of symbol h : ', h1 ,'\n')
+   print('Number of symbol h in persent : ',(h1/(len(text))*100),'% \n')
+   print('Total number of symbol i : ', i1 ,'\n')
+   print('Number of symbol i in persent : ',(i1/(len(text))*100),'% \n')
+   print('Total number of symbol j : ', j1 ,'\n')
+   print('Number of symbol j in persent : ',(j1/(len(text))*100),'% \n')
+   print('Total number of symbol k : ', k1 ,'\n')
+   print('Number of symbol k in persent : ',(k1/(len(text))*100),'% \n')
+   print('Total number of symbol l : ', l1 ,'\n')
+   print('Number of symbol l in persent : ',(l1/(len(text))*100),'% \n')
+   print('Total number of symbol m : ', m1 ,'\n')
+   print('Number of symbol m in persent : ',(m1/(len(text))*100),'% \n')
+   print('Total number of symbol n : ', n1 ,'\n')
+   print('Number of symbol n in persent : ',(n1/(len(text))*100),'% \n')
+   print('Total number of symbol o : ', o1 ,'\n')
+   print('Number of symbol o in persent : ',(o1/(len(text))*100),'% \n')
+   print('Total number of symbol p : ', p1 ,'\n')
+   print('Number of symbol p in persent : ',(p1/(len(text))*100),'% \n')
+   print('Total number of symbol q : ', q1 ,'\n')
+   print('Number of symbol q in persent : ',(q1/(len(text))*100),'% \n')
+   print('Total number of symbol r : ', r1 ,'\n')
+   print('Number of symbol r in persent : ',(r1/(len(text))*100),'% \n')
+   print('Total number of symbol s : ', s1 ,'\n')
+   print('Number of symbol s in persent : ',(s1/(len(text))*100),'% \n')
+   print('Total number of symbol t : ', t1 ,'\n')
+   print('Number of symbol t in persent : ',(t1/(len(text))*100),'% \n')
+   print('Total number of symbol u : ', u1 ,'\n')
+   print('Number of symbol u in persent : ',(u1/(len(text))*100),'% \n')
+   print('Total number of symbol v : ', v1 ,'\n')
+   print('Number of symbol v in persent : ',(v1/(len(text))*100),'% \n')
+   print('Total number of symbol w : ', w1 ,'\n')
+   print('Number of symbol w in persent : ',(w1/(len(text))*100),'% \n')
+   print('Total number of symbol x : ', x1 ,'\n')
+   print('Number of symbol x in persent : ',(x1/(len(text))*100),'% \n') 
+   print('Total number of symbol y : ', y1 ,'\n')
+   print('Number of symbol y in persent : ',(y1/(len(text))*100),'% \n')
+   print('Total number of symbol z : ', z1 ,'\n')
+   print('Number of symbol z in persent : ',(z1/(len(text))*100),'% \n')
+   print('Total number of symbol space : ', space1 ,'\n')
+   print('Number of symbol space in persent : ',(space1/(len(text))*100),'% \n')
+   print('Total number of symbol  : ', len(text),'\n' )
+   print('=======================END OF FILE===============')
