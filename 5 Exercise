@@ -1,0 +1,9 @@
+from freq import freqn
+fileobj = open('C:\\Users\\User\\Desktop\\PT\\SATPY6.txt', 'rt')
+text = fileobj.read()
+fileobj.close()
+freqn(text)
+fileobj = open('C:\\Users\\User\\Desktop\\PT\\SATPY7.txt', 'rt')
+text = fileobj.read()
+fileobj.close()
+freqn(text)
