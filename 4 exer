@@ -29,89 +29,61 @@ x1 = 0
 y1 = 0
 z1 = 0
 space1 = 0 
-sz = 1
-for i in range(len(text)-sz):
+for i in range(len(text)):
      if text[i] == 'a':
           a1 += 1
-          sz += 1
      elif text[i] == 'b':
           b1 += 1
-          sz += 1
      elif text[i] == 'c':
           c1 += 1
-          sz += 1
      elif text[i] == 'd':
           d1 += 1
-          sz += 1
      elif text[i] == 'e':
           e1 += 1
-          sz += 1
      elif text[i] == 'f':
           f1 += 1
-          sz += 1
      elif text[i] == 'g':
           g1 += 1
-          sz += 1
      elif text[i] == 'h':
           h1 += 1
-          sz += 1
      elif text[i] == 'i':
           i1 += 1
-          sz += 1
      elif text[i] == 'j':
           j1 += 1
-          sz += 1
      elif text[i] == 'k':
           k1 += 1
-          sz += 1
      elif text[i] == 'l':
           l1 += 1
-          sz += 1
      elif text[i] == 'm':
           m1 += 1
-          sz += 1
      elif text[i] == 'n':
           n1 += 1
-          sz += 1
      elif text[i] == 'o':
           o1 += 1
-          sz += 1
      elif text[i] == 'p':
           p1 += 1
-          sz += 1
      elif text[i] == 'q':
           q1 += 1
-          sz += 1
      elif text[i] == 'r':
           r1 += 1
-          sz += 1
      elif text[i] == 's':
           s1 += 1
-          sz += 1
      elif text[i] == 't':
           t1 += 1
-          sz += 1
      elif text[i] == 'u':
           u1 += 1
-          sz += 1
      elif text[i] == 'w':
           w1 += 1
-          sz += 1
      elif text[i] == 'x':
           x1 += 1
-          sz += 1
      elif text[i] == 'y':
           y1 += 1
-          sz += 1
      elif text[i] == 'z':
           z1 += 1
-          sz += 1
      elif text[i] == ' ':
           space1 += 1
-          sz += 1
      elif text[i] == 'v':
           v1 += 1
-          sz += 1
 print('Total number of symbol a : ', a1  ,'\n')
 print('Number of symbol a in persent : ',(a1/(len(text))*100),'% \n')
 print('Total number of symbol b : ', b1 ,'\n')
