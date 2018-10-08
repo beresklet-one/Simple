@@ -1,0 +1,13 @@
+import re # Импорт библиотеки с регулярными выражениями
+import urllib.request as ur # Импорт библиотеки обработки запрсов с использованием псевдонима
+url = 'http://www.klaxon.ru/directory/index_reg.php' #Определен адрес
+conn = ur.urlopen(url) #Открывает страницу
+print(conn) # Выводит бинарное значение
+print(conn.status) # Возвращает статус запроса
+data = conn.read() # Открывает для чтения
+print(data) # Выврдит на экран
+source = str(data) # Объявляет источник для выполнения поиска, преобразует в строку
+m = re.search('.*Республика Адыгея', source) # Проводит поиск
+if m:
+    print(m.group())
+    
