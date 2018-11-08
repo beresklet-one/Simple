@@ -15,8 +15,8 @@ source = str(data1)
 #source3 = source2.replace(u'-->', u' ')
 m = re.findall('<tr><td>([\d, ]+)<\/td><td>([^<]+)<\/td><\/tr>', source)
 if m:
-    print('Data load --- Yes')   
-print('_________________________________WORK with MySQL_______________________')
+    print('Data load --- Yes')
+    print('Work with MySQL')
 
 connection = pymysql.connect(host = '127.0.0.1',
                              user = 'root',
@@ -31,7 +31,8 @@ try:
 
         sql = "INSERT INTO refnum (rnumer, rname) VALUES (%s, %s);"
 
-        cursor.execute(sql,(m))
+        for i in range(len(m)):
+            cursor.execute(sql,(m[i]))
 
         connection.commit() 
 
@@ -40,4 +41,4 @@ try:
             
 finally:
 
-    connection.close()    
+    connection.close()
