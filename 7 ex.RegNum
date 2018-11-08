@@ -1,0 +1,43 @@
+import re
+import urllib.request as ur
+import unicodedata
+import pymysql.cursors
+url = 'https://pddmaster.ru/avtomobili/kody-regionov-na-avtomobilnyx-nomerax.html'
+conn = ur.urlopen(url)
+print(conn)
+print(conn.status)
+data = conn.read()
+print('\\\\\\\\\\//////\\\\\\\\//////////')
+data1 = data.decode('utf-8')
+source = str(data1)
+#source1 = source.replace(u'</td><td>', u' ')
+#source2 = source1.replace(u'<!--', u' ')
+#source3 = source2.replace(u'-->', u' ')
+m = re.findall('<tr><td>([\d, ]+)<\/td><td>([^<]+)<\/td><\/tr>', source)
+if m:
+    print('Data load --- Yes')   
+print('_________________________________WORK with MySQL_______________________')
+
+connection = pymysql.connect(host = '127.0.0.1',
+                             user = 'root',
+                             password = 'pytontest',
+                             db = 'sasha_db',
+                             charset = 'utf8',
+                             cursorclass = pymysql.cursors.DictCursor)
+print('connect successful!')
+
+try:
+    with connection.cursor() as cursor:
+
+        sql = "INSERT INTO refnum (rnumer, rname) VALUES (%s, %s);"
+
+        cursor.execute(sql,(m))
+
+        connection.commit() 
+
+        print ("cursor.description: ", cursor.description)
+ 
+            
+finally:
+
+    connection.close()    
