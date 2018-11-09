@@ -16,7 +16,30 @@ source = str(data1)
 m = re.findall('<tr><td>([\d, ]+)<\/td><td>([^<]+)<\/td><\/tr>', source)
 if m:
     print('Data load --- Yes')
-    print('Work with MySQL')
+
+l1 = []
+l2 = []
+l3 = []
+l4 = []
+
+for i in range(len(m)):
+	if len(m[i][0]) > 2:
+		l1.append(m[i][0].split(','))
+		l1.append(m[i][1])
+
+for i in range(len(l1)):
+		   if type(l1[i]) == list:
+			   l2.append(l1[i])
+			   r = len(l1[i])
+		   if type(l1[i]) == str:
+			   for j in range(r):
+				   l3.append(l1[i])
+for i in range(len(l2)):
+		   l4.extend(l2[i])
+
+l5 = list(zip(l4,l3))
+
+print('Work with MySQL')
 
 connection = pymysql.connect(host = '127.0.0.1',
                              user = 'root',
@@ -29,10 +52,20 @@ print('connect successful!')
 try:
     with connection.cursor() as cursor:
 
-        sql = "INSERT INTO refnum (rnumer, rname) VALUES (%s, %s);"
+        sql = "INSERT IGNORE INTO refnum (rnumer, rname) VALUES (%s, %s);"
 
         for i in range(len(m)):
-            cursor.execute(sql,(m[i]))
+            if len(m[i][0]) < 3:
+                cursor.execute(sql,(m[i]))
+
+        connection.commit() 
+
+        print ("cursor.description: ", cursor.description)
+
+        sql1 = "INSERT IGNORE INTO refnum (rnumer, rname) VALUES (%s, %s);"
+
+        for i in range(len(l5)):
+            cursor.execute(sql1,(l5[i]))
 
         connection.commit() 
 
@@ -41,4 +74,4 @@ try:
             
 finally:
 
-    connection.close()
+        connection.close()
